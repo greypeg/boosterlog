@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import { useState } from "react";
-import { HiMenuAlt1, HiX} from "react-icons/hi";
+import { HiMenuAlt1, HiX } from "react-icons/hi";
 
 export const Navbar: React.FC = () => {
 
@@ -33,10 +33,10 @@ export const Navbar: React.FC = () => {
         </div>
 
         <ul className={!nav ? 'hidden' : 'absolute bg-zinc-200 w-full px-8'}>
-            <li className='border-b-2 border-zinc-300 w-full'><Link onClick={()=>{}} href={"/home"}>Home</Link></li>
-            <li className='border-b-2 border-zinc-300 w-full'><Link onClick={()=>{}} href={"/home"}>Games</Link></li>
-            <li className='border-b-2 border-zinc-300 w-full'><Link onClick={()=>{}} href={"/home"}>Booster Applications</Link></li>
-            <li className='border-b-2 border-zinc-300 w-full'><Link onClick={()=>{}} href={"/home"}>Contact</Link></li>
+            <li className='border-b-2 border-zinc-300 w-full'><Link href={"/home"}>Home</Link></li>
+            <li className='border-b-2 border-zinc-300 w-full'><Link href={"/home"}>Games</Link></li>
+            <li className='border-b-2 border-zinc-300 w-full'><Link href={"/home"}>Booster Applications</Link></li>
+            <li className='border-b-2 border-zinc-300 w-full'><Link href={"/home"}>Contact</Link></li>
             <div className='flex flex-col my-4'>
                 <button className='bg-transparent text-indigo-600 px-8 py-3 mb-4'>Sign In</button>
                 <button className='px-8 py-3'>Sign Up</button>
