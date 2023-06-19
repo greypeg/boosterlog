@@ -1,5 +1,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
+import { FadedCard } from "~/components/faded-card";
 import { Navbar } from "~/components/navbar";
 import { api } from "~/utils/api";
 
@@ -14,30 +16,32 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#00043C] to-[#15162c]">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
           <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-            Booster <span className="text-[hsl(280,100%,70%)]">Log</span>
+            Boosters <span className="text-[#FFF8A3]">Inn</span>
           </h1>
-          <p></p>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-            <div className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20">
-              <h3 className="text-2xl font-bold">First Steps →</h3>
+          <p className="text-white text-center">
+            looking to climb the ranks in your favorite competitive game or unlock exclusive rewards, our team of professional gamers is here to help you achieve your goals.
+          </p>
+          <div  className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8 ">
+            <FadedCard>
+              <h3 className="text-2xl font-bold">First Steps</h3>
               <div className="text-lg">
                 Get boosted - Top quality boosters in any game!
               </div>
-            </div>
-            <div
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            >
-              <h3 className="text-2xl font-bold">Become a Booster →</h3>
+            </FadedCard>
+            <FadedCard>
+              <h3 className="text-2xl font-bold">Become a Booster</h3>
               <div className="text-lg">
-                We are in a constant search for the skilled and professional players to fulfill our roster.
+                We are in a constant search for skilled and professional players to fulfill our roster.
               </div>
-            </div>
+            </FadedCard>
+          </div>
+          <div className="bg-black opacity-60">
           </div>
         </div>
-      </main>
+      </main >
     </>
   );
 };
