@@ -29,15 +29,15 @@ export const Navbar: React.FC = () => {
                     </ul>
                     {!user.isSignedIn ?
                         <SignInButton>
-                            <button className='bg-transparent text-[#00043C] px-3 py-2 bg-[#FFF8A3] border-none rounded-2xl'>Login</button>
+                            <button className='bg-transparent text-black px-3 py-2 bg-amber-200 border-none rounded-2xl'>Login</button>
                         </SignInButton>
                         : <SignOutButton>
-                            <button className='bg-transparent text-[#00043C] px-5 py'>Sign out</button>
+                            <button className='bg-transparent text-black px-3 py-2 bg-amber-200 border-none rounded-2xl'>Sign out</button>
                         </SignOutButton>}
                 </div>
             </div>
 
-            <div className='md:hidden mr-4' onClick={handleClick}>  
+            <div className='md:hidden mr-4' onClick={handleClick}>
                 {!nav ? <HiMenuAlt1 className='w-5' /> : <HiX className='w-5' />}
 
             </div>
@@ -51,7 +51,13 @@ export const Navbar: React.FC = () => {
                 <li className='border-b-2 border-zinc-300 w-full'><Link href={"/home"}>FAQ</Link></li>
                 <li className='border-b-2 border-zinc-300 w-full'><Link href={"/home"}>Contact</Link></li>
                 <div className='flex flex-col'>
-                    <button className='bg-transparent text-indigo-600 px-8 py-3'>Login</button>
+                    {!user.isSignedIn ?
+                        <SignInButton>
+                            <button className='bg-transparent text-black px-3 py-2 bg-amber-200 border-none rounded-2xl'>Login</button>
+                        </SignInButton>
+                        : <SignOutButton>
+                            <button className='bg-transparent text-black px-3 py-2 bg-amber-200 border-none rounded-2xl'>Sign out</button>
+                        </SignOutButton>}
                 </div>
             </ul>
         </div>
