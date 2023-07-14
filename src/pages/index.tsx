@@ -7,11 +7,7 @@ import { Navbar } from "~/components/navbar";
 import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
-  const { data, isLoading } = api.example.hello.useQuery({ text: "from tRPC" });
-
-  if (isLoading)
-    return <>{'Loading...'}</>
-
+  
   return (
     <Layout>
       <div>
