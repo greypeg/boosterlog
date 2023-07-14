@@ -2,7 +2,7 @@ import { Logo } from "../logo";
 
 export const Footer: React.FC = () => {
     return (
-        <footer className="bg-[#1A1A1D] bg-rounded-lg shadow ">
+        <footer className="bg-[#1A1A1D] bg-rounded-lg shadow">
             <div className="w-screen max-w-screen-xl mx-auto p-4 md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <a href="" className="flex items-center mb-4 sm:mb-0">

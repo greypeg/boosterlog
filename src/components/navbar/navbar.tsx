@@ -14,7 +14,7 @@ export const Navbar: React.FC = () => {
     const user = useUser();
 
     return (
-        <div className='w-screen h-[80px] z-10 bg-[#1A1A1D] drop-shadow-lg text-white'>
+        <div className='w-full h-[80px] z-10 bg-[#1A1A1D] drop-shadow-lg text-white'>
             <div className='px-2 flex md:justify-around justify-between items-center w-full h-full'>
                 <div className='flex items-center'>
                     <Logo />
@@ -45,14 +45,14 @@ export const Navbar: React.FC = () => {
             </div>
             <div className="grid gap-5">
                 <ul className={!nav ? 'hidden' : 'absolute bg-[#1A1A1D] w-full px-8 py-8 h-screen flex flex-col gap-8 overscroll-none'}>
-                    <li className='w-full text-2xl'><Link href={"/home"}>Home</Link></li>
-                    <li className='w-full text-2xl'><Link href={"/home"}>About</Link></li>
-                    <li className='w-full text-2xl'><Link href={"/home"}>Get Boosting</Link></li>
-                    <li className='w-full text-2xl'><Link href={"/home"}>Boosters</Link></li>
-                    <li className='w-full text-2xl'><Link href={"/home"}>FAQ</Link></li>
-                    <li className='w-full text-2xl'><Link href={"/home"}>Contact</Link></li>
+                    <li className='w-full text-2xl'><Link href={"/"} onClick={() => setNav(false)}>Home</Link></li>
+                    <li className='w-full text-2xl'><Link href={"/about"} onClick={() => setNav(false)}>About</Link></li>
+                    <li className='w-full text-2xl'><Link href={"/boosting"} onClick={() => setNav(false)}>Get Boosting</Link></li>
+                    <li className='w-full text-2xl'><Link href={"/boosters"} onClick={() => setNav(false)}>Boosters</Link></li>
+                    <li className='w-full text-2xl'><Link href={"/faq"} onClick={() => setNav(false)} >FAQ</Link></li>
+                    <li className='w-full text-2xl'><Link href={"/contact"} onClick={() => setNav(false)}>Contact</Link></li>
                     <div className='flex flex-col'>
-                    {!user.isSignedIn ?
+                        {!user.isSignedIn ?
                             <SignInButton>
                                 <button className='text-black px-3 py-2 bg-amber-200 border-none rounded-2xl'>Login</button>
                             </SignInButton>
