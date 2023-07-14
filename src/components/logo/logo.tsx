@@ -4,7 +4,7 @@ export const Logo: React.FC = () => {
             <defs id="SvgjsDefs3016">
             </defs>
             <g id="SvgjsG3017" feature-key="symbolContainer" transform="matrix(1,0,0,1,0,0)" fill="#fff8a3">
-                <path xmlns="http://www.w3.org/2000/svg" fill-rule="nonzero" d="             M0,0             H87             V80             H0,0             z             M4,4             v72             h79             v-72             z     ">
+                <path xmlns="http://www.w3.org/2000/svg" fillRule="nonzero" d="             M0,0             H87             V80             H0,0             z             M4,4             v72             h79             v-72             z     ">
                 </path>
             </g>
             <g id="SvgjsG3018" feature-key="symbolFeature-0" transform="matrix(0.598064127982532,0,0,0.598064127982532,14.009218510501416,10.256118992301733)" fill="#fff8a3">
