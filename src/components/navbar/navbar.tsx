@@ -23,10 +23,10 @@ export const Navbar: React.FC = () => {
                     <div className='flex items-center gap-16'>
                         <ul className='grid gap-4 hidden md:flex'>
                             <li><Link href={"/"}>Home</Link></li>
-                            <li><Link href={"/"}>Boosting</Link></li>
-                            <li><Link href={"/"}>Join BoostersInn</Link></li>
-                            <li><Link href={"/"}>FAQ</Link></li>
-                            <li><Link href={"/"}>Contact</Link></li>
+                            <li><Link href={"/boosting"}>Boosting</Link></li>
+                            <li><Link href={"/boosters"}>Join BoostersInn</Link></li>
+                            <li><Link href={"/faq"}>FAQ</Link></li>
+                            <li><Link href={"/contact"}>Contact</Link></li>
                         </ul>
                         {!user.isSignedIn ?
                             <SignInButton>
@@ -51,6 +51,7 @@ export const Navbar: React.FC = () => {
                     <li className='w-full text-2xl'><Link href={"/boosters"} onClick={() => setNav(false)}>Boosters</Link></li>
                     <li className='w-full text-2xl'><Link href={"/faq"} onClick={() => setNav(false)} >FAQ</Link></li>
                     <li className='w-full text-2xl'><Link href={"/contact"} onClick={() => setNav(false)}>Contact</Link></li>
+                    {user &&  <li className='w-full text-2xl'><Link href={"/profile"} onClick={() => setNav(false)}>Profile</Link></li>}
                     <div className='flex flex-col'>
                         {!user.isSignedIn ?
                             <SignInButton>
